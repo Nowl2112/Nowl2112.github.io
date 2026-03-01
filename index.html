@@ -28,9 +28,11 @@
                     d="M0,110 C240,30 480,170 720,110 C960,40 1200,160 1440,110 L1440,180 L0,180 Z"></path>
             </svg>
         </div>
+        
     </section>
 
-    <!-- Ocean Section -->
+
+    <!-- About Me Section -->
     <section id="about">
         <div class="bubbles"></div>
         <h2>About Me</h2>
@@ -54,12 +56,88 @@
 
             <div class="about-content">
                 <h3>Turning Ideas into Solutions</h3>
-                <p>I enjoy shaping ideas into real products, building solutions with clarity, usability, and thoughtful implementation in mind.</p>
+                <p>I enjoy developing ideas into real products, building solutions with clarity, usability, and thoughtful implementation in mind.</p>
             </div>
             </div>
         </div>
     </section>
 
+    <!-- Projects Section -->
+<section id="projects">
+    <div class="projects-head">
+        <h2>Projects</h2>
+        <p class="projects-sub">Swipe/scroll the reef — each card is a dive log.</p>
+    </div>
+
+    <div class="projects-reef" aria-label="Projects (horizontal)">
+    <article class="project-card" role="button" tabindex="0"
+        data-project="socialcompass"
+        aria-label="Open Social Compass details">
+
+        <div class="project-media">
+            <img src="assets/socialcompass.jpg" alt="Social Compass preview" />
+        </div>
+
+        <div class="project-body">
+            <h3>Social Compass</h3>
+            <p>Social Compass is an app that empowers persons with intellectual disabilities to build social skills and confidence through a gamified experience.</p>
+        </div>
+
+        <span class="card-glow" aria-hidden="true"></span>
+        </article>
+
+        <article class="project-card" role="button" tabindex="0"
+            data-project="autotesthub"
+            aria-label="Open Auto Test Hub details">
+            <div class="project-media">
+            <img src="assets/ath.png" alt="Auto Test Hub preview" />
+        </div>
+            <div class="project-body">
+                <h3>Auto Test Hub</h3>
+                <p>AutoTestHub is a scalable cross-browser automation platform that streamlines parallel testing and uses AI-assisted debugging.</p>
+            </div>
+
+            <span class="card-glow" aria-hidden="true"></span>
+            </article>
+
+        <article class="project-card" role="button" tabindex="0"
+            data-project="healthease"
+            aria-label="Open HealthEase details">
+                    <div class="project-media">
+            <img src="assets/healthEase.png" alt="Project 3 preview" />
+        </div>
+            <div class="project-body">
+                <h3>HealthEase</h3>
+                <p>HealthEase is a cloud-native healthcare platform that enables seniors to assess fall risk at home through guided tests and AI-powered support.</p>
+            </div>
+
+            <span class="card-glow" aria-hidden="true"></span>
+            </article>
+    </div>
+</section>
+
+    <div class="angler-teaser" aria-hidden="false">
+        <img src="assets/angler.png" alt="" class="angler-img" />
+        <button class="angler-hit" type="button" aria-label="Go to Projects"></button>
+        </div>
+
+        <!-- Project Modal -->
+    <div class="modal" id="projectModal" aria-hidden="true">
+        <div class="modal-backdrop" data-close="true"></div>
+
+        <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+            <button class="modal-close" type="button" aria-label="Close modal" data-close="true">✕</button>
+
+            <h3 id="modalTitle">Title</h3>
+            <p class="modal-sub" id="modalSub">Short line</p>
+
+            <div class="modal-content" id="modalContent"></div>
+
+            <div class="modal-actions" id="modalActions"></div>
+        </div>
+    </div>
+
     <script src="js/index.js"></script>
+
 </body>
 </html>
