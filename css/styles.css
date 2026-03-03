@@ -1219,7 +1219,6 @@ body.bait-used .angler-hit{ animation: none; }
         animation: tailWiggle 2.6s ease-in-out infinite;
     }
 
-    /* Achievements: rise + bob */
     body.section-achievements .cat-mover{
         transition: none;
         animation:
@@ -1227,7 +1226,6 @@ body.bait-used .angler-hit{ animation: none; }
         catBobAtBottom 8.5s ease-in-out 1800ms infinite;
     }
 
-    /* Achievements: flip upright */
     body.section-achievements .cat-img{
         transition: none;
         animation: catFlipUpright 2400ms cubic-bezier(.2,.9,.2,1) forwards;
@@ -1239,7 +1237,6 @@ body.bait-used .angler-hit{ animation: none; }
         pointer-events: auto;
     }
 
-    /* Hide in other sections on mobile (optional) */
     body.section-intro .cat-mover,
     body.section-about .cat-mover{
         animation: none;
