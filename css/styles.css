@@ -1158,7 +1158,7 @@ body.bait-used .angler-hit{ animation: none; }
     body.section-intro .cat-img{
     animation: none;
     }
-    
+
     @media (min-width: 769px){
 
 
@@ -1201,4 +1201,58 @@ body.bait-used .angler-hit{ animation: none; }
     @media (prefers-reduced-motion: reduce){
     .cat-mover{ transition: none; animation: none !important; }
     .cat-img{ transition: none; animation: none !important; }
+    }
+
+@media (max-width: 768px){
+
+    .cat-teaser{
+        right: 10%;
+        bottom: 0;
+        width: min(200px, 70vw);
+        rotate: 20deg; /* usually nicer on small screens */
+    }
+
+    /* Tail-peek state (so it can "rise" from something) */
+    body.section-projects .cat-mover{
+        transition: transform 900ms cubic-bezier(.2,.9,.2,1);
+        animation: none;
+        transform: translateX(55%) translateY(55%); /* tweak until only tail shows */
+    }
+    body.section-projects .cat-img{
+        transform: rotate(180deg);
+        animation: tailWiggle 2.6s ease-in-out infinite;
+    }
+
+    /* Achievements: rise + bob */
+    body.section-achievements .cat-mover{
+        transition: none;
+        animation:
+        catRiseIn 1800ms cubic-bezier(.2,.9,.2,1) forwards,
+        catBobAtBottom 8.5s ease-in-out 1800ms infinite;
+    }
+
+    /* Achievements: flip upright */
+    body.section-achievements .cat-img{
+        transition: none;
+        animation: catFlipUpright 2400ms cubic-bezier(.2,.9,.2,1) forwards;
+    }
+
+    body.section-achievements .cat-hit{
+        opacity: 1;
+        transform: translateX(0);
+        pointer-events: auto;
+    }
+
+    /* Hide in other sections on mobile (optional) */
+    body.section-intro .cat-mover,
+    body.section-about .cat-mover{
+        animation: none;
+        transform: translateX(120%) translateY(35%);
+    }
+    body.section-intro .cat-hit,
+    body.section-about .cat-hit{
+        opacity: 0;
+        transform: translateX(30px);
+        pointer-events: none;
+    }
     }
